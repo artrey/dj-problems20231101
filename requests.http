@@ -1,0 +1,29 @@
+POST http://localhost:8000/api/v1/login/
+Content-Type: application/json
+
+{
+"username": "admin",
+"password": "develop"
+}
+
+###
+
+GET http://localhost:8000/api/v1/notes/
+Content-Type: application/json
+Authorization: Token 99d05f891adf9ab5341c238d25656a613ca8d378
+
+###
+
+POST http://localhost:8000/api/v1/notes/
+Content-Type: application/json
+Authorization: Token 99d05f891adf9ab5341c238d25656a613ca8d378
+
+{
+  "text": "hello 3"
+}
+
+###
+
+POST http://localhost:8000/api/v1/notes/1/toggle-favourite/
+Content-Type: application/json
+Authorization: Token 99d05f891adf9ab5341c238d25656a613ca8d378
